@@ -24,13 +24,8 @@ class Hero(db.Model, SerializerMixin):
 
 
     # add serialization rules
-    def to_distinct(self, serialize_only=None):
-        return {
-            'id': self.id,
-            'name': self.name,
-            'super_name': self.super_name,
-            'hero_powers': [hp.to_distinct() for hp in self.hero_powers]            
-        }
+    serialize_rules=('-hero_powers.hero',)
+    
 
     def __repr__(self):
         return f'<Hero {self.id}>'
