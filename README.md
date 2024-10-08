@@ -37,7 +37,6 @@ To download the dependencies for the frontend and backend, run:
 ```console
 pipenv install
 pipenv shell
-npm install --prefix client
 ```
 
 You can run your Flask API on [`localhost:5555`](http://localhost:5555) by
@@ -49,10 +48,6 @@ python server/app.py
 
 You can run your React app on [`localhost:4000`](http://localhost:4000) by
 running:
-
-```sh
-npm start --prefix client
-```
 
 You are not being assessed on React, and you don't have to update any of the
 React code; the frontend code is available just so that you can test out the
@@ -348,3 +343,6 @@ data, along with the appropriate HTTP status code:
   "errors": ["validation errors"]
 }
 ```
+
+## Author
+Kini Esther
